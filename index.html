@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sri Lanka Education System - Comprehensive Guide</title>
+  <!-- Font Awesome CDN for icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    :root {
+      --primary: #3498db;
+      --secondary: #2c3e50;
+      --accent: #9b59b6;
+      --light: #f8f9fa;
+      --dark: #2c3e50;
+      --success: #27ae60;
+      --warning: #f39c12;
+      --danger: #e74c3c;
+      --gray: #6c757d;
+      --light-gray: #e9ecef;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { 
+      font-family: 'Open Sans', sans-serif; 
+      line-height: 1.7; 
+      color: #444; 
+      overflow-x: hidden; 
+      background-color: #f9fbfd;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      color: var(--dark);
+      line-height: 1.3;
+    }
+    .container { 
+      max-width: 1200px; 
+      margin: 0 auto; 
+      padding: 0 20px; 
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      border-radius: 2px;
+    }
+    .section-padding {
+      padding: 100px 0;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+      font-family: 'Poppins', sans-serif;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+    .btn-primary:hover {
+      background: #2980b9;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+    .btn-outline:hover {
+      background: var(--primary);
+      color: white;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    /* Navigation */
+    .navbar { 
+      position: fixed; 
+      top: 0; 
+      width: 100%; 
+      background: rgba(255,255,255,0.98); 
+      backdrop-filter: blur(10px); 
+      z-index: 1000; 
+      transition: all 0.3s; 
+      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+      padding: 0.5rem 0;
+    }
+    .nav-container { 
+      max-width: 1200px; 
+      margin: 0 auto; 
+      padding: 0 20px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center;
+    }
+    .nav-logo { 
+      display: flex; 
+      align-items: center; 
+      font-size: 1.6rem; 
+      font-weight: bold; 
+      color: var(--secondary);
+      text-decoration: none;
+    }
+    .nav-logo i { 
+      margin-right: 0.5rem; 
+      color: var(--primary);
+      font-size: 1.8rem;
+    }
+    .nav-menu { 
+      display: flex; 
+      list-style: none; 
+      gap: 2rem;
+    }
+    .nav-link { 
+      text-decoration: none; 
+      color: var(--dark); 
+      font-weight: 500; 
+      transition: color 0.3s; 
+      position: relative;
+      font-size: 1.05rem;
+    }
+    .nav-link:hover { 
+      color: var(--primary);
+    }
+    .nav-link::after { 
+      content: ''; 
+      position: absolute; 
+      width: 0; 
+      height: 3px; 
+      bottom: -5px; 
+      left: 0; 
+      background: var(--primary); 
+      transition: width 0.3s;
+      border-radius: 2px;
+    }
+    .nav-link:hover::after { 
+      width: 100%; 
+    }
+    .nav-link.active {
+      color: var(--primary);
+    }
+    .nav-link.active::after {
+      width: 100%;
+    }
+    .hamburger { 
+      display: none; 
+      flex-direction: column; 
+      cursor: pointer; 
+    }
+    .bar { 
+      width: 25px; 
+      height: 3px; 
+      background: var(--dark); 
+      margin: 3px 0; 
+      transition: 0.3s;
+      border-radius: 2px;
+    }
+
+    /* Hero Section */
+    .hero { 
+      min-height: 100vh; 
+      display: flex; 
+      align-items: center; 
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+      color: white; 
+      padding: 100px 20px 50px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,128L48,117.3C96,107,192,85,288,112C384,139,480,213,576,218.7C672,224,768,160,864,138.7C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+      background-size: cover;
+      background-position: bottom;
+      opacity: 0.2;
+    }
+    .hero-content { 
+      flex: 1; 
+      max-width: 600px; 
+      z-index: 2;
+    }
+    .hero-content h1 { 
+      font-size: 3.5rem; 
+      margin-bottom: 1.5rem; 
+      font-weight: 700; 
+      line-height: 1.2;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    .hero-content p { 
+      font-size: 1.3rem; 
+      margin-bottom: 2.5rem; 
+      opacity: 0.95;
+      font-weight: 300;
+    }
+    .hero-visual { 
+      flex:1; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center;
+    }
+    .education-stats { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); 
+      gap:1.5rem; 
+      max-width:500px;
+    }
+    .stat-card { 
+      background: rgba(255,255,255,0.15); 
+      backdrop-filter: blur(10px); 
+      padding: 2rem 1rem; 
+      border-radius: 16px; 
+      text-align: center; 
+      border: 1px solid rgba(255,255,255,0.2); 
+      transition: transform 0.3s;
+    }
+    .stat-card:hover { 
+      transform: translateY(-10px);
+    }
+    .stat-card i { 
+      font-size: 2.5rem; 
+      margin-bottom: 1rem; 
+      color: white;
+    }
+    .stat-card h3 { 
+      font-size: 2.2rem; 
+      margin-bottom: 0.5rem; 
+      font-weight: bold;
+    }
+    .stat-card p { 
+      font-size: 0.95rem; 
+      opacity: 0.9;
+      font-weight: 300;
+    }
+
+    /* Overview */
+    .overview {
+      background: var(--light);
+    }
+    .overview-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); 
+      gap: 3rem;
+    }
+    .overview-card { 
+      background: white; 
+      padding: 2.5rem; 
+      border-radius: 15px; 
+      text-align: center; 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .overview-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--primary), var(--accent));
+    }
+    .overview-card:hover { 
+      transform: translateY(-10px); 
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    }
+    .overview-card i { 
+      font-size: 3.5rem; 
+      color: var(--primary); 
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .overview-card h3 { 
+      font-size: 1.5rem; 
+      margin-bottom: 1rem; 
+      color: var(--dark);
+    }
+    .overview-card p { 
+      color: #666; 
+      line-height: 1.7;
+    }
+
+    /* History Section */
+    .history {
+      background: white;
+    }
+    .history-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .history-timeline {
+      position: relative;
+      padding-left: 3rem;
+    }
+    .history-timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 4px;
+      background: linear-gradient(to bottom, var(--primary), var(--accent));
+      border-radius: 2px;
+    }
+    .history-item {
+      position: relative;
+      margin-bottom: 2.5rem;
+    }
+    .history-item:last-child {
+      margin-bottom: 0;
+    }
+    .history-item::before {
+      content: '';
+      position: absolute;
+      left: -3rem;
+      top: 0.5rem;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--primary);
+      border: 4px solid white;
+      box-shadow: 0 0 0 3px var(--primary);
+    }
+    .history-year {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .history-text h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+    }
+    .history-text p {
+      color: #666;
+    }
+    .history-image {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+    .history-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .history-image:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Structure */
+    .structure {
+      background: var(--light);
+    }
+    .structure-timeline {
+      max-width: 900px; 
+      margin: 0 auto; 
+      position: relative;
+      padding: 2rem 0;
+    }
+    .structure-timeline::before { 
+      content: ''; 
+      position: absolute; 
+      left: 50%; 
+      transform: translateX(-50%); 
+      width: 4px; 
+      height: 100%; 
+      background: linear-gradient(to bottom, var(--primary), var(--accent)); 
+      border-radius: 2px;
+    }
+    .timeline-item { 
+      display: flex; 
+      margin-bottom: 3rem; 
+      position: relative;
+    }
+    .timeline-item:nth-child(odd) { 
+      flex-direction: row-reverse;
+    }
+    .timeline-item:nth-child(odd) .timeline-content { 
+      text-align: right; 
+      padding-right: 3rem; 
+    }
+    .timeline-item:nth-child(even) .timeline-content { 
+      text-align: left; 
+      padding-left: 3rem; 
+    }
+    .timeline-dot { 
+      position: absolute; 
+      left: 50%; 
+      transform: translateX(-50%); 
+      width: 24px; 
+      height: 24px; 
+      background: var(--primary); 
+      border-radius: 50%; 
+      border: 4px solid white; 
+      box-shadow: 0 0 0 4px var(--primary); 
+      z-index: 2;
+      transition: all 0.3s ease;
+    }
+    .timeline-content { 
+      flex: 1; 
+      background: white; 
+      padding: 2rem; 
+      border-radius: 15px; 
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      max-width: 45%;
+    }
+    .timeline-content:hover {
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+      transform: translateY(-5px);
+    }
+    .timeline-content h3 { 
+      font-size: 1.4rem; 
+      color: var(--dark); 
+      margin-bottom: 0.5rem;
+    }
+    .timeline-years { 
+      color: var(--primary); 
+      font-weight: 600; 
+      font-size: 1rem;
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding: 0.3rem 0.8rem;
+      background: rgba(52, 152, 219, 0.1);
+      border-radius: 20px;
+    }
+    .timeline-content p { 
+      margin-top: 1rem; 
+      color: #666; 
+      line-height: 1.7;
+    }
+    .structure-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+    .structure-image img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+
+    /* Universities */
+    .universities {
+      background: white;
+    }
+    .university-types { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit,minmax(400px,1fr)); 
+      gap: 3rem; 
+      margin-bottom: 4rem;
+    }
+    .university-type {
+      background: white; 
+      padding: 2.5rem; 
+      border-radius: 15px; 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      border-top: 5px solid var(--primary);
+    }
+    .university-type:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    }
+    .university-type h3 { 
+      font-size: 1.5rem; 
+      color: var(--dark); 
+      margin-bottom: 1.5rem; 
+      display: flex; 
+      align-items: center; 
+      gap: 0.5rem;
+    }
+    .university-type h3 i {
+      color: var(--primary);
+      font-size: 1.8rem;
+    }
+    .university-type p {
+      margin-bottom: 1.5rem; 
+      color: #666;
+      line-height: 1.7;
+    }
+    .university-type ul { 
+      list-style: none;
+    }
+    .university-type li {
+      padding: 0.8rem 0; 
+      color: #555; 
+      border-bottom: 1px solid #eee; 
+      position: relative; 
+      padding-left: 1.8rem;
+      transition: all 0.3s ease;
+    }
+    .university-type li:hover {
+      background: #f8f9fa;
+      padding-left: 2rem;
+    }
+    .university-type li:before {
+      content: '→'; 
+      position: absolute; 
+      left: 0; 
+      color: var(--primary); 
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    .university-type li:hover:before {
+      transform: translateX(3px);
+    }
+    .admission-info {
+      background: white; 
+      padding: 3rem; 
+      border-radius: 15px; 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      margin-top: 3rem;
+      border-left: 5px solid var(--accent);
+    }
+    .admission-info h3 {
+      text-align: center; 
+      font-size: 1.8rem; 
+      color: var(--dark); 
+      margin-bottom: 2.5rem;
+    }
+    .admission-steps {
+      display: grid; 
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); 
+      gap: 2rem;
+    }
+    .step { 
+      text-align: center; 
+      padding: 2rem; 
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    .step:hover {
+      transform: translateY(-5px);
+    }
+    .step-number {
+      display: inline-flex; 
+      align-items: center; 
+      justify-content: center; 
+      width: 60px; 
+      height: 60px; 
+      background: linear-gradient(135deg, var(--primary), var(--accent)); 
+      color: white; 
+      border-radius: 50%; 
+      font-size: 1.5rem; 
+      font-weight: bold; 
+      margin-bottom: 1.5rem;
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+    }
+    .step h4 {
+      font-size: 1.3rem; 
+      color: var(--dark); 
+      margin-bottom: 0.8rem;
+    }
+    .step p {
+      color: #666; 
+      line-height: 1.6;
+    }
+
+    /* Statistics Section */
+    .statistics {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .statistics::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,128L48,117.3C96,107,192,85,288,112C384,139,480,213,576,218.7C672,224,768,160,864,138.7C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+      background-size: cover;
+      background-position: bottom;
+      opacity: 0.2;
+    }
+    .statistics .section-title {
+      color: white;
+    }
+    .statistics .section-title::after {
+      background: rgba(255,255,255,0.5);
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+    .stat-item {
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px);
+      padding: 2.5rem 1.5rem;
+      border-radius: 16px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: all 0.3s ease;
+    }
+    .stat-item:hover {
+      transform: translateY(-10px);
+      background: rgba(255,255,255,0.2);
+    }
+    .stat-item i {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: white;
+    }
+    .stat-item h3 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+    .stat-item p {
+      color: rgba(255,255,255,0.9);
+      font-size: 1.1rem;
+    }
+
+    /* Vocational Education */
+    .vocational {
+      background: var(--light);
+    }
+    .vocational-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .vocational-image {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+    .vocational-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .vocational-image:hover img {
+      transform: scale(1.05);
+    }
+    .vocational-types {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .vocational-type {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      border-left: 4px solid var(--primary);
+    }
+    .vocational-type:hover {
+      transform: translateX(5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    .vocational-type h4 {
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .vocational-type h4 i {
+      color: var(--primary);
+    }
+    .vocational-type p {
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    /* Challenges Section */
+    .challenges {
+      background: white;
+    }
+    .challenges-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.5rem;
+    }
+    .challenge-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .challenge-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+    .challenge-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    }
+    .challenge-card:hover::after {
+      transform: scaleX(1);
+    }
+    .challenge-card i {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+    }
+    .challenge-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: var(--dark);
+    }
+    .challenge-card p {
+      color: #666;
+      line-height: 1.7;
+    }
+
+    /* About Section */
+    .about {
+      background: var(--light);
+    }
+    .about-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .about-text p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+    .key-features {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      border-left: 5px solid var(--primary);
+    }
+    .key-features h3 {
+      font-size: 1.5rem;
+      color: var(--dark);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #eee;
+    }
+    .key-features ul {
+      list-style: none;
+    }
+    .key-features li {
+      padding: 1rem 0;
+      color: #555;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      border-bottom: 1px solid #eee;
+      transition: all 0.3s ease;
+    }
+    .key-features li:hover {
+      background: #f8f9fa;
+      padding-left: 0.5rem;
+    }
+    .key-features li:last-child {
+      border-bottom: none;
+    }
+    .key-features i {
+      color: var(--success);
+      font-size: 1.1rem;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--dark);
+      color: white;
+      padding: 4rem 0 1.5rem;
+    }
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+    .footer-section h3 {
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.5rem;
+    }
+    .footer-section h4 {
+      margin-bottom: 1.5rem;
+      color: #ecf0f1;
+      font-size: 1.2rem;
+    }
+    .footer-section p {
+      color: #bdc3c7;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+    .footer-section ul {
+      list-style: none;
+    }
+    .footer-section li {
+      margin-bottom: 0.8rem;
+    }
+    .footer-section a {
+      color: #bdc3c7;
+      text-decoration: none;
+      transition: color 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .footer-section a:hover {
+      color: var(--primary);
+    }
+    .footer-section a i {
+      width: 20px;
+    }
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+    .social-links a:hover {
+      background: var(--primary);
+      transform: translateY(-3px);
+    }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid #34495e;
+      color: #bdc3c7;
+      font-size: 0.9rem;
+    }
+
+    /* Scroll progress bar */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      z-index: 9999;
+      transition: width 0.1s;
+    }
+
+    /* Back to top button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      z-index: 99;
+      opacity: 0;
+      visibility: hidden;
+    }
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    .back-to-top:hover {
+      background: var(--accent);
+      transform: translateY(-5px);
+    }
+
+    /* Responsive */
+    @media (max-width: 1200px) {
+      .hero-content h1 {
+        font-size: 3rem;
+      }
+    }
+    @media (max-width: 992px) {
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+      .history-content,
+      .vocational-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .about-content {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .structure-image {
+        display: none;
+      }
+    }
+    @media (max-width: 768px){
+      .hamburger {display:flex;}
+      .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+        padding: 2rem 0;
+        gap: 0;
+      }
+      .nav-menu.active {left:0;}
+      .nav-menu li {margin:1.5rem 0;}
+      .hamburger.active .bar:nth-child(2){opacity:0;}
+      .hamburger.active .bar:nth-child(1){transform:translateY(8px) rotate(45deg);}
+      .hamburger.active .bar:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 120px 20px 50px;
+      }
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+      .hero-content p {
+        font-size: 1.1rem;
+      }
+      .hero-visual {
+        margin-top: 3rem;
+      }
+      .overview-grid, 
+      .university-types, 
+      .admission-steps,
+      .stats-grid,
+      .challenges-container {
+        grid-template-columns: 1fr;
+      }
+      .structure-timeline::before {
+        left: 20px;
+      }
+      .timeline-item {
+        flex-direction: column;
+        padding-left: 50px;
+      }
+      .timeline-item:nth-child(odd) {
+        flex-direction: column;
+      }
+      .timeline-item .timeline-content {
+        max-width: 100%;
+        padding: 2rem;
+      }
+      .timeline-dot {
+        left: 20px;
+        transform: translateX(-50%);
+      }
+      .section-title {
+        font-size: 2.2rem;
+      }
+    }
+    @media (max-width: 576px){
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+      .education-stats {
+        grid-template-columns: 1fr;
+      }
+      .stat-card {
+        padding: 1.5rem 1rem;
+      }
+      .overview-card, 
+      .university-type, 
+      .admission-info,
+      .key-features {
+        padding: 2rem;
+      }
+      .section-title {
+        font-size: 2rem;
+      }
+      .history-timeline {
+        padding-left: 2rem;
+      }
+      .history-item::before {
+        left: -2rem;
+      }
+    }
+    @media (max-width: 400px){
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+      .section-title {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <i class="fas fa-graduation-cap"></i>
+        <span>SL Education</span>
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+        <li class="nav-item"><a href="#overview" class="nav-link">Overview</a></li>
+        <li class="nav-item"><a href="#history" class="nav-link">History</a></li>
+        <li class="nav-item"><a href="#structure" class="nav-link">Structure</a></li>
+        <li class="nav-item"><a href="#universities" class="nav-link">Universities</a></li>
+        <li class="nav-item"><a href="#statistics" class="nav-link">Statistics</a></li>
+        <li class="nav-item"><a href="#vocational" class="nav-link">Vocational</a></li>
+        <li class="nav-item"><a href="#challenges" class="nav-link">Challenges</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress"></div>
+
+  <!-- Back to top button -->
+  <a href="#" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Sri Lanka Education System</h1>
+        <p>Discover one of Asia's most comprehensive education systems with free education from primary to tertiary level</p>
+        <button class="btn btn-primary" onclick="scrollToSection('overview')">
+          <i class="fas fa-arrow-down"></i> Explore System
+        </button>
+      </div>
+      <div class="hero-visual">
+        <div class="education-stats">
+          <div class="stat-card">
+            <i class="fas fa-book-reader"></i>
+            <h3>96.3%</h3>
+            <p>Literacy Rate</p>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-school"></i>
+            <h3>10,100+</h3>
+            <p>Public Schools</p>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-university"></i>
+            <h3>17</h3>
+            <p>State Universities</p>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>4.2%</h3>
+            <p>of GDP to Education</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview Section -->
+  <section id="overview" class="overview section-padding">
+    <div class="container">
+      <h2 class="section-title">Education System Overview</h2>
+      <div class="overview-grid">
+        <div class="overview-card">
+          <i class="fas fa-users"></i>
+          <h3>Free Education Policy</h3>
+          <p>Education is free at all levels, from kindergarten to university, established in 1945. This policy has made education accessible to all socioeconomic backgrounds and contributed to the country's high literacy rate.</p>
+        </div>
+        <div class="overview-card">
+          <i class="fas fa-language"></i>
+          <h3>Trilingual Education</h3>
+          <p>Education is conducted in Sinhala, Tamil, and English to serve the diverse linguistic population. English is taught as a second language from grade 3 onward to enhance global competitiveness.</p>
+        </div>
+        <div class="overview-card">
+          <i class="fas fa-certificate"></i>
+          <h3>Structured Assessment</h3>
+          <p>Comprehensive examination system including Grade 5 Scholarship Exam, GCE Ordinary Level (O/L) and Advanced Level (A/L) qualifications that determine university entrance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- History Section -->
+  <section id="history" class="history section-padding">
+    <div class="container">
+      <h2 class="section-title">Historical Development</h2>
+      <div class="history-content">
+        <div class="history-timeline">
+          <div class="history-item">
+            <div class="history-year">Ancient Period</div>
+            <div class="history-text">
+              <h3>Traditional Education System</h3>
+              <p>Education was based on religious institutions: Buddhist monasteries (Pirivenas) for Sinhalese students and Hindu temples (Kovils) for Tamil students. Focused on religious teachings, languages, medicine, and astrology.</p>
+            </div>
+          </div>
+          <div class="history-item">
+            <div class="history-year">1830s</div>
+            <div class="history-text">
+              <h3>British Colonial Influence</h3>
+              <p>British established modern schools emphasizing English education. Created elite schools like Royal College Colombo (1835) and Jaffna College (1872) that followed British curriculum.</p>
+            </div>
+          </div>
+          <div class="history-item">
+            <div class="history-year">1945</div>
+            <div class="history-text">
+              <h3>Free Education Policy</h3>
+              <p>Dr. C.W.W. Kannangara introduced free education from kindergarten to university level, making Sri Lanka one of the first developing countries to establish free education.</p>
+            </div>
+          </div>
+          <div class="history-item">
+            <div class="history-year">1951</div>
+            <div class="history-text">
+              <h3>University of Ceylon</h3>
+              <p>First university established, later becoming University of Peradeniya and University of Colombo. Marked the beginning of tertiary education in the country.</p>
+            </div>
+          </div>
+          <div class="history-item">
+            <div class="history-year">1960s-70s</div>
+            <div class="history-text">
+              <h3>Nationalization of Schools</h3>
+              <p>Private schools were nationalized and medium of instruction changed to Sinhala and Tamil, reducing English-medium education significantly.</p>
+            </div>
+          </div>
+          <div class="history-item">
+            <div class="history-year">1980s</div>
+            <div class="history-text">
+              <h3>Open Economy Reforms</h3>
+              <p>International schools and private education institutions emerged, offering English-medium education and alternative curricula alongside the state system.</p>
+            </div>
+          </div>
+          <div class="history-item">
+            <div class="history-year">1997</div>
+            <div class="history-text">
+              <h3>General Education Reforms</h3>
+              <p>Introduced compulsory education for children aged 5-14 years and established the National Institute of Education to oversee curriculum development.</p>
+            </div>
+          </div>
+        </div>
+        <div class="history-image">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='500' height='300' viewBox='0 0 500 300'><rect width='500' height='300' fill='%23f0f0f0'/><text x='250' y='150' font-family='Arial' font-size='20' text-anchor='middle' fill='%23333'>Sri Lanka Education History</text></svg>" alt="Sri Lanka Education History">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Structure -->
+  <section id="structure" class="structure section-padding">
+    <div class="container">
+      <h2 class="section-title">Education Structure</h2>
+      <div class="structure-timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Primary Education</h3>
+            <span class="timeline-years">Grades 1-5 (Ages 5-10)</span>
+            <p>Foundation education covering language (Sinhala/Tamil), mathematics, environmental studies, religion, English (from grade 3), aesthetics, and physical education. Students can take the Grade 5 Scholarship Examination for placement in popular schools.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Junior Secondary</h3>
+            <span class="timeline-years">Grades 6-9 (Ages 10-13)</span>
+            <p>Four-year phase expanding on primary education with additional subjects including science, history, geography, civics, practical and technical skills, health and physical education. Prepares students for subject selection in senior secondary.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Senior Secondary</h3>
+            <span class="timeline-years">Grades 10-11 (Ages 14-16)</span>
+            <p>Two-year program preparing for GCE Ordinary Level (O/L) examinations. Students study 6-9 subjects including compulsory subjects (first language, religion, mathematics, science, history, English) and optional subjects (arts, commerce, technology, etc.).</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Collegiate Level</h3>
+            <span class="timeline-years">Grades 12-13 (Ages 16-18)</span>
+            <p>Advanced Level (A/L) preparation with four streams: Arts, Commerce, Biological Science, and Physical Science. Students typically choose 3 subjects related to their stream. Performance determines university admission through a competitive Z-score system.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Universities Section -->
+  <section id="universities" class="universities section-padding">
+    <div class="container">
+      <h2 class="section-title">Higher Education Institutions</h2>
+      <div class="university-types">
+        <div class="university-type">
+          <h3><i class="fas fa-landmark"></i> Public Universities</h3>
+          <p>17 state universities under the University Grants Commission offering free education to qualified students. Admission is highly competitive based on Z-scores from Advanced Level examinations.</p>
+          <ul>
+            <li>University of Colombo (Est. 1921) - Oldest university, strong in humanities, law, medicine</li>
+            <li>University of Peradeniya - Premier university with expansive campus, strong in engineering, science</li>
+            <li>University of Moratuwa - Leading technological university specializing in engineering, architecture</li>
+            <li>University of Sri Jayewardenepura - Strong in management, social sciences, medicine</li>
+            <li>University of Kelaniya - Known for humanities, languages, social sciences</li>
+            <li>University of Ruhuna - Focus on agriculture, medicine, engineering</li>
+            <li>Eastern University - Serving Eastern Province with diverse programs</li>
+          </ul>
+        </div>
+        <div class="university-type">
+          <h3><i class="fas fa-building"></i> Private Universities & Institutions</h3>
+          <p>27 private universities among 47 government-approved institutions offering alternative pathways to higher education, often with international collaborations and industry-focused programs.</p>
+          <ul>
+            <li>Sri Lanka Institute of Information Technology (SLIIT) - Leading in IT education</li>
+            <li>NSBM Green University - First green university in Sri Lanka</li>
+            <li>Informatics Institute of Technology - Partnership with University of Westminster</li>
+            <li>University of Asia Pacific - Engineering, business, and architecture programs</li>
+            <li>International Institute of Health Sciences - Specialized healthcare education</li>
+            <li>American National College - Business and technology programs</li>
+            <li>Horizon Campus - Diverse programs with international affiliations</li>
+          </ul>
+        </div>
+      </div>
+      <div class="admission-info">
+        <h3>University Admission Process</h3>
+        <div class="admission-steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h4>GCE A-Level Completion</h4>
+            <p>Complete Advanced Level examinations in chosen stream with minimum 3 passes required for eligibility</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h4>Z-Score Calculation</h4>
+            <p>Performance evaluated through competitive Z-score ranking system that normalizes scores across different subjects and years</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h4>District Quota Allocation</h4>
+            <p>Admission considers both merit and district-based quotas to ensure regional representation</p>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <h4>University & Course Selection</h4>
+            <p>Students select preferences through a centralized system managed by the University Grants Commission</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics Section -->
+  <section id="statistics" class="statistics section-padding">
+    <div class="container">
+      <h2 class="section-title">Education Statistics</h2>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <i class="fas fa-user-graduate"></i>
+          <h3>4.2M+</h3>
+          <p>Students Enrolled</p>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-chalkboard-teacher"></i>
+          <h3>235K+</h3>
+          <p>Teachers</p>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-school"></i>
+          <h3>10,100+</h3>
+          <p>Public Schools</p>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-book"></i>
+          <h3>96.3%</h3>
+          <p>Adult Literacy Rate</p>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-male"></i>
+          <h3>97%</h3>
+          <p>Male Literacy Rate</p>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-female"></i>
+          <h3>95.6%</h3>
+          <p>Female Literacy Rate</p>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-university"></i>
+          <h3>17</h3>
+          <p>State Universities</p>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-graduation-cap"></i>
+          <h3>25,000+</h3>
+          <p>Annual University Admissions</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vocational Education -->
+  <section id="vocational" class="vocational section-padding">
+    <div class="container">
+      <h2 class="section-title">Vocational Education & Training</h2>
+      <div class="vocational-content">
+        <div class="vocational-text">
+          <p>Sri Lanka has developed a comprehensive vocational education system to address skills development and employment needs. The Vocational Training Authority (VTA) and Department of Technical Education and Training (DTET) oversee these programs.</p>
+          <div class="vocational-types">
+            <div class="vocational-type">
+              <h4><i class="fas fa-tools"></i> Technical Colleges</h4>
+              <p>38 technical colleges offering certificate and diploma programs in engineering, technology, and applied sciences.</p>
+            </div>
+            <div class="vocational-type">
+              <h4><i class="fas fa-laptop-code"></i> Vocational Training Centers</h4>
+              <p>256 vocational training centers providing skills training in various trades and crafts across all districts.</p>
+            </div>
+            <div class="vocational-type">
+              <h4><i class="fas fa-hands-helping"></i> National Apprenticeship Program</h4>
+              <p>Combines classroom instruction with on-the-job training in various industries and trades.</p>
+            </div>
+            <div class="vocational-type">
+              <h4><i class="fas fa-briefcase"></i> NVQ Certification</h4>
+              <p>National Vocational Qualification (NVQ) framework with 7 levels recognizing skills and competencies.</p>
+            </div>
+          </div>
+        </div>
+        <div class="vocational-image">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='500' height='300' viewBox='0 0 500 300'><rect width='500' height='300' fill='%23f0f0f0'/><text x='250' y='150' font-family='Arial' font-size='20' text-anchor='middle' fill='%23333'>Vocational Training in Sri Lanka</text></svg>" alt="Vocational Education in Sri Lanka">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Challenges Section -->
+  <section id="challenges" class="challenges section-padding">
+    <div class="container">
+      <h2 class="section-title">Challenges & Reforms</h2>
+      <div class="challenges-container">
+        <div class="challenge-card">
+          <i class="fas fa-balance-scale"></i>
+          <h3>Regional Disparities</h3>
+          <p>Significant differences in educational resources and outcomes between urban and rural areas, and between provinces. Schools in Colombo district outperform those in remote areas.</p>
+        </div>
+        <div class="challenge-card">
+          <i class="fas fa-language"></i>
+          <h3>English Language Gap</h3>
+          <p>Despite being an official language, English proficiency remains limited outside urban centers, affecting employment opportunities and global competitiveness.</p>
+        </div>
+        <div class="challenge-card">
+          <i class="fas fa-graduation-cap"></i>
+          <h3>University Admission Limits</h3>
+          <p>Only about 20% of eligible A-Level students gain admission to state universities, creating intense competition and pressure on students.</p>
+        </div>
+        <div class="challenge-card">
+          <i class="fas fa-book"></i>
+          <h3>Curriculum Relevance</h3>
+          <p>Criticism that curriculum focuses heavily on examinations rather than practical skills, creativity, and critical thinking needed for modern economy.</p>
+        </div>
+        <div class="challenge-card">
+          <i class="fas fa-chalkboard"></i>
+          <h3>Teacher Shortages</h3>
+          <p>Shortage of qualified teachers in specific subjects (especially mathematics, science, and English) and remote areas affects education quality.</p>
+        </div>
+        <div class="challenge-card">
+          <i class="fas fa-laptop"></i>
+          <h3>Digital Divide</h3>
+          <p>Limited access to technology and digital resources in rural schools became particularly evident during COVID-19 pandemic disruptions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about section-padding">
+    <div class="container">
+      <h2 class="section-title">About This Resource</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>This comprehensive resource provides detailed information about Sri Lanka's education system, one of the most successful educational frameworks in South Asia. With a literacy rate of 96.3%, Sri Lanka demonstrates how accessible, free education can transform a nation despite economic challenges.</p>
+          <p>The system's trilingual approach ensures cultural preservation while preparing students for global opportunities. From primary education through university level, the structured approach provides clear pathways for academic and professional development.</p>
+          <p>Sri Lanka's education system has evolved significantly since independence in 1948, maintaining free education as a fundamental right while adapting to changing economic and social needs. The system faces challenges including regional disparities, limited university admission opportunities, and the need for curriculum modernization, but continues to produce a highly literate population.</p>
+          <p>This resource aims to provide students, educators, researchers, and policymakers with comprehensive information about all aspects of education in Sri Lanka, from historical development to current structure and future challenges.</p>
+        </div>
+        <div class="key-features">
+          <h3>Key System Features</h3>
+          <ul>
+            <li><i class="fas fa-check"></i> Free education from primary to tertiary level</li>
+            <li><i class="fas fa-check"></i> Compulsory education for ages 5-14</li>
+            <li><i class="fas fa-check"></i> Three official languages of instruction</li>
+            <li><i class="fas fa-check"></i> Standardized national examination system</li>
+            <li><i class="fas fa-check"></i> Merit-based university admission with district quotas</li>
+            <li><i class="fas fa-check"></i> Both public and private higher education options</li>
+            <li><i class="fas fa-check"></i> Comprehensive vocational training system</li>
+            <li><i class="fas fa-check"></i> High literacy rate (96.3%)</li>
+            <li><i class="fas fa-check"></i> Gender parity in education access</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3><i class="fas fa-graduation-cap"></i> SL Education</h3>
+          <p>Comprehensive resource for understanding Sri Lanka's education system, its history, structure, challenges, and achievements.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#overview"><i class="fas fa-arrow-right"></i> System Overview</a></li>
+            <li><a href="#history"><i class="fas fa-arrow-right"></i> Historical Development</a></li>
+            <li><a href="#structure"><i class="fas fa-arrow-right"></i> Education Structure</a></li>
+            <li><a href="#universities"><i class="fas fa-arrow-right"></i> Universities</a></li>
+            <li><a href="#statistics"><i class="fas fa-arrow-right"></i> Statistics</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#"><i class="fas fa-external-link-alt"></i> Ministry of Education</a></li>
+            <li><a href="#"><i class="fas fa-external-link-alt"></i> University Grants Commission</a></li>
+            <li><a href="#"><i class="fas fa-external-link-alt"></i> Department of Examinations</a></li>
+            <li><a href="#"><i class="fas fa-external-link-alt"></i> National Institute of Education</a></li>
+            <li><a href="#"><i class="fas fa-external-link-alt"></i> Vocational Training Authority</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <p><i class="fas fa-map-marker-alt"></i> 123 Education Drive, Colombo 07, Sri Lanka</p>
+          <p><i class="fas fa-phone"></i> +94 11 234 5678</p>
+          <p><i class="fas fa-envelope"></i> info@sleducation.lk</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Sri Lanka Education System Resource. All rights reserved. Educational content for informational purposes.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- JavaScript -->
+  <script>
+    // Hamburger menu
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+      document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+    });
+    
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Smooth scroll for navigation links and button
+    function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const offsetTop = section.offsetTop - 80; // fixed navbar space
+        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+      }
+    }
+    
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        scrollToSection(targetId);
+        
+        // Update active class
+        navLinks.forEach(navLink => navLink.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+
+    // Scroll progress bar
+    const progressBar = document.createElement('div');
+    progressBar.className = 'scroll-progress';
+    document.body.appendChild(progressBar);
+    
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset;
+      const docHeight = document.body.offsetHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      progressBar.style.width = scrollPercent + '%';
+    });
+
+    // Active nav highlighting
+    window.addEventListener('scroll', () => {
+      let current = '';
+      const sections = document.querySelectorAll('section[id]');
+      const scrollY = window.pageYOffset + 100;
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').substring(1) === current) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Back to top button
+    const backToTopButton = document.querySelector('.back-to-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('visible');
+      } else {
+        backToTopButton.classList.remove('visible');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Counter animation for stats
+    function animateCounters() {
+      const counters = document.querySelectorAll('.stat-card h3, .stat-item h3');
+      const speed = 200; // The lower the slower
+      
+      counters.forEach(counter => {
+        const target = +counter.innerText.replace(/[^0-9.]/g, '');
+        const isPercent = counter.innerText.includes('%');
+        let count = 0;
+        const increment = target / speed;
+        
+        const updateCount = () => {
+          if (count < target) {
+            count += increment;
+            counter.innerText = isPercent ? Math.floor(count) + '%' : Math.floor(count).toLocaleString();
+            setTimeout(updateCount, 1);
+          } else {
+            counter.innerText = isPercent ? target + '%' : target.toLocaleString();
+          }
+        };
+        
+        updateCount();
+      });
+    }
+    
+    // Animate when stats come into view
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounters();
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    const heroStats = document.querySelector('.education-stats');
+    const statisticsSection = document.querySelector('.statistics');
+    
+    if (heroStats) {
+      statsObserver.observe(heroStats);
+    }
+    
+    if (statisticsSection) {
+      statsObserver.observe(statisticsSection);
+    }
+
+    // Interactive timeline dots
+    document.querySelectorAll('.timeline-item').forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        item.querySelector('.timeline-dot').style.background = '#e74c3c';
+        item.querySelector('.timeline-dot').style.boxShadow = '0 0 0 4px white, 0 0 0 8px rgba(231,76,60,0.3)';
+      });
+      
+      item.addEventListener('mouseleave', () => {
+        item.querySelector('.timeline-dot').style.background = '#3498db';
+        item.querySelector('.timeline-dot').style.boxShadow = '0 0 0 4px white, 0 0 0 6px #3498db';
+      });
+    });
+
+    // Responsive adjustments
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set current year in footer if needed
+      const yearElement = document.querySelector('.footer-bottom');
+      if (yearElement) {
+        const currentYear = new Date().getFullYear();
+        yearElement.innerHTML = yearElement.innerHTML.replace('2023', currentYear);
+      }
+    });
+  </script>
+</body>
+</html>
